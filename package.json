@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/justinlolch/solidity-lottery/issues"
   },
-  "homepage": "https://github.com/justinlolch/solidity-lottery#readme"
+  "homepage": "https://github.com/justinlolch/solidity-lottery#readme",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.1",
+    "dotenv": "^14.3.2",
+    "ganache-cli": "^6.1.8",
+    "mocha": "^9.2.0",
+    "solc": "^0.8.11",
+    "web3": "^1.7.0"
+  }
 }
