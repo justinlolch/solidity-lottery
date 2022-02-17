@@ -17,7 +17,7 @@ contract Lottery {
     }
 
     function random() private view returns (uint) {
-        return uint(keccak256(abi.encode(block.difficulty, block.difficulty, players)));
+        return uint(keccak256(abi.encode(block.difficulty, block.timestamp, players)));
     }
     
     function pickWinner() public payable restricted {
