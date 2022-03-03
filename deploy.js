@@ -2,6 +2,7 @@ const HDWalletProvider = require("@truffle/hdwallet-provider");
 const Web3 = require("web3");
 const { abi, evm } = require("./compile");
 const dotenv = require("dotenv");
+const util = require("util");
 
 dotenv.config();
 
@@ -21,6 +22,9 @@ const deploy = async () => {
     .deploy({ data: evm.bytecode.object })
     .send({ gas: "1000000", from: accounts[0] });
 
+  console.log(
+    util.inspect(abi, { showHidden: false, depth: null, colors: true })
+  );
   console.log("Contract deployed to", result.options.address);
   provider.engine.stop();
 };
